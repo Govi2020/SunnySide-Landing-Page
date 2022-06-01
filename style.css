@@ -1,9 +1,8 @@
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
-
 
 body {
     box-sizing: border-box;
@@ -12,7 +11,7 @@ body {
 
 nav {
     margin: 0.3rem 1rem;
-    position: absolute;
+    position: fixed;
     /* visibility: hidden; */
     z-index: 10;
     display: flex;
@@ -45,7 +44,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: "Fire Sans", sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 .btn-contact {
@@ -100,7 +99,7 @@ nav {
     margin-bottom: 4rem;
     color: white;
     letter-spacing: 0.2rem;
-    font-family: 'Courgette', cursive;
+    font-family: "Courgette", cursive;
     text-align: center;
 }
 
@@ -119,21 +118,20 @@ nav {
 }
 
 @media screen and (max-width: 768px) {
-    .hero_container{
+    .hero_container {
         background-image: url("images/mobile/image-header.jpg");
     }
     .hero_title {
         font-size: 4rem;
     }
-    .services{
+    .services {
         height: fit-content;
     }
-    .services_card{
+    .services_card {
         height: 100%;
         width: 100%;
     }
 }
-
 
 @keyframes up_and_down {
     0% {
@@ -172,7 +170,7 @@ nav {
     font-size: 2.5rem;
     font-weight: bold;
     color: #242e3e;
-    font-family: 'Courgette', cursive;
+    font-family: "Courgette", cursive;
 }
 .info-learn-more {
     text-transform: uppercase;
@@ -208,13 +206,12 @@ nav {
 }
 .info-desc {
     margin-bottom: 40px;
-    font-family: sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 1.1rem;
     line-height: 1.5rem;
     word-spacing: 0.05rem;
     color: rgb(94, 94, 94);
-    font-family: Fira Sans,sans-serif;
+    font-family: Roboto, sans-serif;
 }
 .info-img-container {
     flex: 1;
@@ -224,7 +221,6 @@ nav {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    
 }
 .right {
     flex-direction: row-reverse;
@@ -267,7 +263,7 @@ nav {
     font-size: 1.8rem;
     font-weight: bold;
     color: #242e3e;
-    font-family: 'Courgette', cursive;
+    font-family: "Courgette", cursive;
 }
 
 .services_card-dec {
@@ -276,15 +272,16 @@ nav {
     line-height: 1.5rem;
     color: rgb(94, 94, 94);
     text-align: center;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
 }
 
-.ct{
+.ct {
     width: 100vw;
     height: max-content;
 }
 
-.ct-wrapper{
+.ct-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -303,12 +300,14 @@ nav {
     line-height: 1.6rem;
     margin-bottom: 5rem;
     text-align: center;
+    font-family: "Roboto",sans-serif;
 }
 
 .ct-name {
     font-size: 1.3rem;
     font-weight: bold;
     margin-bottom: 1rem;
+    font-family: "Roboto",sans-serif;
 }
 
 .ct-card {
@@ -321,6 +320,10 @@ nav {
     max-width: 390px;
 }
 
+.ct-occupation {
+    font-family: Roboto , sans-serif;
+}
+
 .ct-reviews {
     display: flex;
     align-items: center;
@@ -329,10 +332,10 @@ nav {
     flex-wrap: wrap;
 }
 
-.ct-title{
+.ct-title {
     margin-top: 6pc;
     font-size: 2.5rem;
-    font-family: 'Courgette', cursive;
+    font-family: "Courgette", cursive;
 }
 
 .gallery {
@@ -346,28 +349,28 @@ nav {
     flex: 1;
 }
 
-.gallery-image{
+.gallery-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
     flex: 1;
 }
 
-footer{
+footer {
     height: 40vh;
     background-color: #90d4c5;
 }
 
-.footer-wrapper{
+.footer-wrapper {
     display: flex;
     justify-items: center;
-    align-items:center;
+    align-items: center;
     flex-direction: column;
     width: 100%;
     height: 100%;
 }
 
-.footer_logo{
+.footer_logo {
     margin-bottom: 1.5rem;
     width: 100%;
     display: flex;
@@ -381,7 +384,7 @@ footer{
     display: block !important;
 }
 
-.footer-menu{
+.footer-menu {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -390,16 +393,15 @@ footer{
     width: 400px;
 }
 
-.footer-item{
-    color : #468d7d;
+.footer-item {
+    color: #468d7d;
     list-style: none;
     cursor: pointer;
     font-weight: 600;
     font-size: 1.2rem;
 }
 
-
-.footer_links{
+.footer_links {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -409,59 +411,77 @@ footer{
     margin-bottom: 1rem;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#hamburger {
+    height: 30px;
+    margin-right: 46px;
+    object-fit: cover;
+    width: 40px;
+    cursor: pointer;
+    display: none;
+}
 
 @media screen and (max-width: 900px) {
     .info-card {
         flex-direction: column-reverse !important;
         height: fit-content;
     }
-    .info-text{
-        padding : 70px 10px 70px 10px !important;
+    .info-text {
+        padding: 70px 10px 70px 10px !important;
         text-align: center;
     }
-    .info-wrapper{
+    .info-wrapper {
         align-items: center;
         justify-content: center;
         width: 90%;
     }
-    .info-img-container{
+    .info-img-container {
         width: 100%;
     }
-    .services{
+    .services {
         flex-direction: column !important;
         height: fit-content;
     }
-    .services_card-text{
+    .services_card-text {
         width: 80%;
         left: 10%;
     }
-    .gallery{
+    .gallery {
         flex-direction: column !important;
     }
-    
-    .nav-menu{
-        display: none;
+    #hamburger {
+        display: block !important;
+    }
+    .nav-menu {
+        visibility: hidden;
+        opacity: 0;
+        transition: none;
+    }
+    .box-active {
+        transition: opacity 0.5s ease-in-out;
+        display: flex !important;
+        flex-direction: column !important;
+        position: fixed !important;
+        top: 129px !important;
+        visibility: visible;
+        opacity: 1;
+        left: 5vw;
+        background: white;
+        right: 0;
+        width: 90vw;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        height: 40vh;
+        overflow: visible;
+    }
+    .box-active .nav-item{
+        color: gray;
+        margin: 3vw;
+        font-size: 4vw;
+    }
+    .box-active .btn-contact{
+        background-color: #fbd601;
+        padding: 40px 100px;
     }
 }
 

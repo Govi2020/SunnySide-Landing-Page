@@ -31,3 +31,12 @@ window.onresize = () => {
         })
     }
 };
+
+hamburger.onclick = () => {
+    navBox = document.getElementById("nav-menu");
+    if(navBox.classList.contains("box-active")){
+        navBox.classList.remove("box-active");
+    }else{
+        navBox.classList.add("box-active");
+    }
+}
